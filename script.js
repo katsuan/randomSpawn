@@ -1,10 +1,10 @@
 // パラメーターを定義する
 function getParameters() {
     const params = new URL(window.location.href).searchParams;
-    const minX = params.get("minX") || "10";
-    const maxX = params.get("maxX") || "1400";
-    const minY = params.get("minY") || "10";
-    const maxY = params.get("maxY") || "1900";
+    const minX = params.get("mX") || "10";
+    const maxX = params.get("MX") || "1400";
+    const minY = params.get("mY") || "10";
+    const maxY = params.get("MY") || "1900";
     console.log(minX);
     return {
         minX: parseInt(minX, 10),
