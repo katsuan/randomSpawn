@@ -2,9 +2,9 @@
 function getParameters() {
     const params = new URL(window.location.href).searchParams;
     const minX = params.get("minX") || "10";
-    const maxX = params.get("maxX") || "1900";
+    const maxX = params.get("maxX") || "1400";
     const minY = params.get("minY") || "10";
-    const maxY = params.get("maxY") || "1000";
+    const maxY = params.get("maxY") || "1900";
     console.log(minX);
     return {
         minX: parseInt(minX, 10),
