@@ -7,6 +7,7 @@ function getParameters() {
     const minY = defaultValue("y", 10);
     const maxY = defaultValue("Y", 1900);
     const redirectTo = defaultValue("space", "wao-mirai");
+    const connectTo = "?object_connect_to=" + defaultValue("connect", "");
 
     return {
         minX: parseInt(minX, 10),
@@ -14,6 +15,7 @@ function getParameters() {
         minY: parseInt(minY, 10),
         maxY: parseInt(maxY, 10),
         redirectTo,
+        connectTo,
     };
 }
 
@@ -30,5 +32,6 @@ function generateRandomCoordinates() {
 
 // ランダムな座標を含むURLにリダイレクトする
 const redirectTo = getParameters().redirectTo;
-const redirectURL = 'https://' + redirectTo + '.ovice.in/@' + generateRandomCoordinates()
+const connectTo = getParameters().connectTo;
+const redirectURL = 'https://' + redirectTo + '.ovice.in/@' + generateRandomCoordinates() + connectTo
 window.location.href = redirectURL;
